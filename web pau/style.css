@@ -1,0 +1,46 @@
+   
+    
+    body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('8e49b487-f2ff-4f13-ba4b-45661d5096e3.jpg');;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+  text-align: center;
+  padding: 40px;
+}
+
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      width: 80%;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: #ff4d6d;
+      color: white;
+      border-radius: 5px;
+    }
+
+    #pista2,
+    #pista3,
+    #pistaFinal {
+      display: none;
+      margin-top: 20px;
+    }

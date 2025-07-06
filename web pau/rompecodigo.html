@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Rompecódigo - Suma de letras</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .codigo-box {
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    td {
+      border: 1px solid #444;
+      padding: 10px;
+      width: 40px;
+      text-align: center;
+    }
+    input[type="text"] {
+      padding: 10px;
+      margin-top: 20px;
+      width: 200px;
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #ffcb05;
+      border: none;
+      color: #121212;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-size: 1.4em;
+      color: #00ff99;
+    }
+  </style>
+</head>
+<body>
+  <div class="codigo-box">
+    <h1>🧙‍♀️ Rompecódigo de Sumas</h1>
+    <p>Usa el código A=1, B=2, ..., Z=26 y suma las letras de cada palabra.</p>
+    <table>
+      <tr><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td>I</td><td>J</td></tr>
+      <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+      <tr><td>K</td><td>L</td><td>M</td><td>N</td><td>O</td><td>P</td><td>Q</td><td>R</td><td>S</td><td>T</td></tr>
+      <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+    </table>
+    <p>¿Cuál es la suma total de las letras de "Regalo"?</p>
+    <input type="text" id="input1" placeholder="Suma de Regalo">
+    <p>¿Y la suma total de las letras de "Sorpresa"?</p>
+    <input type="text" id="input2" placeholder="Suma de Sorpresa">
+    <br>
+    <button onclick="comprobarCodigo()">Comprobar</button>
+    <div id="resultado"></div>
+  </div>
+
+  <script>
+    function comprobarCodigo() {
+      const r1 = document.getElementById('input1').value;
+      const r2 = document.getElementById('input2').value;
+      const res = document.getElementById('resultado');
+      if (r1 === '52' && r2 === '115') {
+        res.innerHTML = "✨ ¡Correcto! Las sumas te dan la clave: <strong>18 y 19</strong> de julio. ✨";
+      } else {
+        res.innerHTML = "❌ Revisa los valores de cada letra y vuelve a intentarlo.";
+      }
+    }
+  </script>
+</body>
+</html>

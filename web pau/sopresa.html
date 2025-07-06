@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¡SORPRESA FINAL!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+    .video-background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .video-background iframe {
+      width: 100vw;
+      height: 56.25vw; /* 16:9 ratio */
+      min-height: 100vh;
+      min-width: 177.77vh;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .mensaje {
+      position: relative;
+      z-index: 1;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+    }
+    .mensaje-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 700px;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #ffcb05;
+      text-shadow: 0 0 10px #ffcb05;
+    }
+    p {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🎥 FONDO DE YOUTUBE -->
+  <div class="video-background">
+    <iframe src="https://www.youtube.com/embed/Wdr_I0q-AnI?autoplay=1&mute=1&controls=0&loop=1&playlist=Wdr_I0q-AnI&modestbranding=1&showinfo=0&rel=0"
+      frameborder="0"
+      allow="autoplay"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- 🎉 MENSAJE -->
+  <div class="mensaje">
+    <div class="mensaje-content">
+      <h1>¡LO HAS CONSEGUIDO!</h1>
+      <p>Has resuelto todas las pistas como una verdadera campeona 🌟</p>
+      <p>Prepara la mochila, el bañador y la mejor sonrisa...</p>
+      <p>Porque <strong>el 18 y 19 de julio</strong>...</p>
+      <h2>¡NOS VAMOS A LA WARNER + WARNER BEACH!</h2>
+      <p>Con tu hermana, contigo... y alguien que te quiere con locura ❤️</p>
+    </div>
+  </div>
+
+</body>
+</html>
