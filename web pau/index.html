@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Escape Room - El Viaje Secreto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>¡Bienvenida al Escape Room!</h1>
+    <p>Primera pista: ¿Qué días pueden ser especiales para la sorpresa?</p>
+    <p>Para ello tendras que visitrar esta web... Suerte!</p>
+    <button url="rompecodigo.html" onclick="window.location.href='rompecodigo.html'">Ir al Rompecódigo</button>
+    <input type="text" id="respuesta1" placeholder="Días del viaje...">
+    <button onclick="comprobarRespuesta1()">Comprobar</button>
+
+    <div id="pista2">
+      <h2>¡Correcto!</h2>
+      <p>Segunda pista: Aqui tendras que poner todo tu potencial de profe para resolver este puzzle... jejeje suerte!</p>
+      <input type="text" id="respuesta2" placeholder="Nombre del coso...">
+      <button onclick="comprobarRespuesta2()">Comprobar</button>
+    </div>
+
+    <div id="pista3">
+      <h2>¡Muy bien!</h2>
+      <p>Tercera y última pista: Sola no irás, por que dos escuderos te acompañaran.. aun que quizás no a protegerte... los adivinas?</p>
+      <input type="text" id="respuesta3" placeholder="Pista final...">
+      <button onclick="comprobarRespuesta3()">Comprobar</button>
+    </div>
+
+    <div id="pistaFinal">
+      <h2>¡Sorpresa revelada!</h2>
+      
+    </div>
+  </div>
+
+  <script>
+    function comprobarRespuesta1() {
+      const r = document.getElementById("respuesta1").value.toLowerCase();
+      if (r.includes("viernes") && r.includes("sabado")) {
+        document.getElementById("pista2").style.display = "block";
+      } else {
+        alert("Mmm... piensa en los días de vuestra escapada, son 2...");
+      }
+    }
+
+    function comprobarRespuesta2() {
+      const r = document.getElementById("respuesta2").value.toLowerCase();
+      if (r.includes("warner")) {
+        document.getElementById("pista3").style.display = "block";
+      } else {
+        alert("Parece que te falta algo de diversión y agua en tu respuesta.");
+      }
+    }
+
+    function comprobarRespuesta3() {
+      const r = document.getElementById("respuesta3").value.toLowerCase();
+      if (r.includes("emma") || r.includes("nani")) {
+        document.getElementById("pistaFinal").style.display = "block";
+        window.open("sopresa.html", "_blank");
+      } else {
+        alert("Pista no reconocida... piensa en quiénes van contigo.");
+      }
+    }
+  </script>
+</body>
+</html>
